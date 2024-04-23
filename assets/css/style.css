@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: #fafafa;
+  --gray-color: #3c3c3c;
+  --green-color: #1ff130;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1.5em;
+  padding: 50px 100px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 3px #0a0a0a40;
+}
+
+ .input-tarefa {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 3px #0a0a0a20;
+  border: none;
+  margin-bottom: 10px;
+  transition: linear all 0.3s;
+}
+
+.validInput, .validInput:focus{
+  outline: 1px solid var(--green-color);
+  box-shadow: 0px 0px 5px 3px #0a0a0a00;
+}
+
+
+ input:focus {
+  outline: 1px solid red;
+  box-shadow: 0px 0px 5px 3px #0a0a0a00;
+}
+
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #0a0a0a;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+img{
+  height: 60px;
+  margin-right: 10px;
+}
+
+p{
+  color: #0a0a0a;
+}
+
+ .btn-tarefa {
+  outline: none;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  background: var(--gray-color);
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 6px 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px #0a0a0a20;
+  transition: 0.3s linear all;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.valid{
+  color: var(--gray-color);
+  background: var(--green-color);
+  box-shadow: 0px 0px 3px 1px #0a0a0a40;
+}
+
+
+
+
+.apagar {
+  outline: none;
+  border: 0;
+  color: #fff;
+  background-color: red;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 1px #0a0a0a20;
+  transition: 0.3s linear all;
+}
+
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 3px #0a0a0a40;
+}
+
+li{
+  list-style: none;
+  color: var(--gray-color);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:fit-content;
+  padding: 5px 15px;
+  border-radius: 3px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 3px 1px #0a0a0a20;
+}
+
+@media screen and (max-width: 699px) {
+  .card{
+    padding: 40px 20px;
+  }
+  .btn-tarefa{
+    width: 100%;
+  }
+  h1{
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  img{
+    margin-right: 10px;
+    height: 45px;
+  }
+}
