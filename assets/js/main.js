@@ -1,6 +1,7 @@
 const inputTarefa = document.querySelector('.input-tarefa');
 const btnTarefa = document.querySelector('.btn-tarefa');
 const tarefas = document.querySelector('.tarefas');
+const erro = document.querySelector('.erro');
 
 function criaLi(){
     const li = document.createElement('li');
@@ -48,14 +49,19 @@ function inputUpdate(){
     }
     btnTarefa.classList.add('valid');
     inputTarefa.classList.add('validInput');
-
+    erro.innerHTML = '';
+    erro.classList.remove('erromsg');
+    return;
 }
 
 btnTarefa.addEventListener('click', function(){
     if(!inputTarefa.value){
-        return alert('Insira uma Tarefa!');    
+        erro.innerText = 'Insira uma tarefa';
+        erro.classList.add('erromsg');
+        return;    
         } 
     criaTarefa(inputTarefa.value);
+    return;
 });
 
 inputTarefa.addEventListener('keyup', e => {
